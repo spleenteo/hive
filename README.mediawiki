@@ -1,21 +1,44 @@
 = Hive =
 
-== What the Hive is ==
+== What the Hive is this!? ==
+
 A css grid system inspired by the more famous 960grid.
 The naming of wrappers and grids has changed using the metaphore ho hives and cells.
 Using just one markup you con have a responsive (mobiles ready) fixed (with a predered width in px) or fluid (with a prefered % width).
 This system is written in scss but you can find alsa a ready to use css.
 
 == Features ==
+
 * scss grid system
 * flexible gutter between columns
 * Responsive ready for mobile design
 * Fixed or fluid template structure (you can changed it on the fly)
 
 == Installation ==
-hive is written in scss, so you need a sass interpreter to export the final css file.   
+
+Hive is written in scss, so you need a sass interpreter to export the final css file.   
 In any case you can use the css but you'll loose the possibility to change the parameters to get fixed of fluid template.
 I use the haml ruby gem as sass interpreter. THis is the command
 
-$> sass -C -t compact --watch [the/scss/main/directory/path]:[your/website/css/directory]
+  $> sass -C -t compact --watch [the/scss/main/directory/path]:[your/website/css/directory]
 
+== Classes ==
+
+If you are a 960gris user you'll know the two main calsses .container_* and .grid_*
+In Hive there is the same basic concept with different names:
+
+* .hive_12 and .hive_16 for containers
+* .cell_[from 1 to 12/16] for grids
+
+== Example ==
+
+  <body>
+    <hgroup class=".hive_12">
+      <h1 class=".cell_6">
+        text on the left
+      </h1>
+      <h2 class=".cell_6">
+        text on the right side
+      </h3>
+    </hgroup>
+  </body>
