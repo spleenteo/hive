@@ -32,13 +32,13 @@ In Hive there is the same basic concept with different names:
 
 == Example ==
 
-  <body>
-    <hgroup class=".hive_12">
-      <h1 class=".cell_6">
-        text on the left
-      </h1>
-      <h2 class=".cell_6">
-        text on the right side
-      </h3>
-    </hgroup>
-  </body>
+ <body>
+  <hgroup class=".hive_12">
+   <h1 class=".cell_6">
+    text on the left
+   </h1>
+   <h2 class=".cell_6">
+    text on the right side
+   </h3>
+  </hgroup>
+ </body>
