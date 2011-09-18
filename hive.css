@@ -1,11 +1,11 @@
 /* PERSONALIZED GRID SYSTEM */
-/* FORKED BY THE ORIGINAL 960 GRID */
+/* FORKED FROM THE ORIGINAL 960 GRID */
 /**********************************/
 /* can be fixed or fluid */
-/* set the desired fixed width in pixel or %  */
-/* if you use percentage, take care to avoid to go upper then 92% to left some margin */
+/* set the desired fixed width in pixels or %  */
+/* if you use a percentage, take care to avoid going above 92% to leave some margin */
 /* set the margin between columns, in px for fixed layout %*/
-/* WARNING: Internal variables, don't change it! these are assumed to modify margin in fixed layout */
+/* WARNING: Internal variables, don't change them! these are assumed to modify the margin in fixed layout */
 .hive_12, .hive_16 { width: 960px; margin-left: auto; margin-right: auto; }
 
 .cell_1, .cell_2, .cell_3, .cell_4, .cell_5, .cell_6, .cell_7, .cell_8, .cell_9, .cell_10, .cell_11, .cell_12, .cell_13, .cell_14, .cell_15, .cell_16 { display: inline; float: left; margin-left: 10px; margin-right: 10px; position: relative; }
@@ -185,7 +185,6 @@
   .cell_12 .cell_14, .cell_16 .cell_14 { width: 100% !important; }
   .cell_12 .cell_15, .cell_16 .cell_15 { width: 100% !important; }
   .cell_12 .cell_16, .cell_16 .cell_16 { width: 100% !important; } }
-
 /* SETTING FOR SMARTPHONES */
 /* portrait and landscape */
 @media screen and (max-width : 620px) { .hive_12, .hive_16 { padding: 10px 0; width: 100% !important; margin: 0; }

@@ -1,21 +1,21 @@
 /* PERSONALIZED GRID SYSTEM */
-/* FORKED BY THE ORIGINAL 960 GRID */
+/* FORKED FROM THE ORIGINAL 960 GRID */
 /**********************************/
 
 // TODO there is a bug on fluid grid 3 col on margins
 
 $type:  fixed;         /* can be fixed or fluid */
 // $type: fluid;
-$width: 960px;            /* set the desired fixed width in pixel or %  */
-                        /* if you use percentage, take care to avoid to go upper then 92% to left some margin */
+$width: 960px;            /* set the desired fixed width in pixels or %  */
+                        /* if you use a percentage, take care to avoid going above 92% to leave some margin */
 $margin_fx: 10px;       /* set the margin between columns, in px for fixed layout %*/
 //$margin_fl: 0.99%;      /* set the margin between columns in % for fluid */
 
 
 
 /*
- * WARNING: Internal variables, don't change it!
- * these are assumed to modify margin in fixed layout
+ * WARNING: Internal variables, don't change them!
+ * these are assumed to modify the margin in fixed layout
  */
 $unit_12: $width / 12;
 $unit_16: $width / 16;
