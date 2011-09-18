@@ -39,12 +39,15 @@ Example
 -------
 
     <body>
-     <hgroup class=".hive_12">
-      <h1 class=".cell_6">
+     <hgroup class="hive_12">
+      <h1 class="cell_6">
        text on the left
       </h1>
-      <h2 class=".cell_6">
+      <h2 class="cell_6">
        text on the right side
       </h3>
      </hgroup>
+     <article class="cell_12">
+       wide content
+     </article>
     </body>
