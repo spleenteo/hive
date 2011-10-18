@@ -1,0 +1,27 @@
+body{
+    font-family: Arial;
+    font-size: 0.8em;
+    background-image: url("bg.jpg");
+    color: #000;
+}
+section{
+    display: block;
+    border: 1px solid gray;
+    height: 100px;
+    font-family: Arial;
+    font-size: 10px;
+    line-height: 100px;
+    text-align: center;
+    margin-bottom: 10px;
+    background-color: rgba(255,255,255,0.75);
+}
+h1, h2, p{
+    padding: 4px;
+}
+h1, h2{
+    letter-spacing: -0.09em;
+}
+h1{
+    font-size: 4.5em;
+    margin: 3px;
+}
