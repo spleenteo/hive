@@ -22,6 +22,7 @@ $unit_16: $width / 16;
 
 .hive_12,
 .hive_16 {
+    @extend .clearfix;
     width: $width;
     @if $type == fixed {
         margin-left: auto;
@@ -590,28 +591,28 @@ $unit_16: $width / 16;
         width: 100%;
         padding: 0;
         margin: 0;
-        .cell_16, .cell_15, .cell_14, .cell_13, .cell_12, .cell_11, .cell_9, .cell_8, .cell_7, .cell_6, .cell_5, .cell_4, .cell_3, .cell_2, .cell_1{
+        .cell_16, .cell_15, .cell_14, .cell_13, .cell_12, .cell_11, .cell_10, .cell_9, .cell_8, .cell_7, .cell_6, .cell_5, .cell_4, .cell_3, .cell_2, .cell_1{
             width: 100%;
             margin: 0;
         }
         .cell_10{
-               width: 66.6%;
-         }
+            width: 66.5%;
+        }
         .cell_2{
-               width: 33.3%;
-         }
+            width: 33.3%;
+        }
         .cell_9, .cell_13{
-               width: 75%;
-         }
+            width: 75%;
+        }
         .cell_6{
-               width: 50%;
-         }
+            width: 50%;
+        }
         .cell_3{
-               width: 25%;
-         }
+            width: 25%;
+        }
     }
     .hive_16{
-        .cell_16, .cell_15, .cell_14, .cell_13, .cell_12, .cell_11, .cell_9, .cell_8, .cell_7, .cell_6, .cell_5, .cell_4, .cell_3, .cell_2, .cell_1{
+        .cell_16, .cell_15, .cell_14, .cell_13, .cell_12, .cell_11,  .cell_10, .cell_9, .cell_8, .cell_7, .cell_6, .cell_5, .cell_4, .cell_3, .cell_2, .cell_1{
             width: 100%;
             margin: 0;
         }

@@ -156,24 +156,24 @@
 
 .clear { clear: both; display: block; overflow: hidden; visibility: hidden; width: 0; height: 0; }
 
-.clearfix:after { clear: both; content: ' '; display: block; font-size: 0; line-height: 0; visibility: hidden; width: 0; height: 0; }
+.clearfix:after, .hive_12:after, .hive_16:after { clear: both; content: ' '; display: block; font-size: 0; line-height: 0; visibility: hidden; width: 0; height: 0; }
 
-.clearfix { display: inline-block; }
+.clearfix, .hive_12, .hive_16 { display: inline-block; }
 
-* html.clearfix { height: 1%; }
+* html.clearfix, * html.hive_12, * html.hive_16 { height: 1%; }
 
-.clearfix { display: block; }
+.clearfix, .hive_12, .hive_16 { display: block; }
 
 /* SETTING FOR SMARTPHONES LANDSCAPE */
 @media screen and (max-width : 680px) { body { padding: 0; margin: 0; }
   .hive_12 { width: 100%; padding: 0; margin: 0; }
-  .hive_12 .cell_16, .hive_12 .cell_15, .hive_12 .cell_14, .hive_12 .cell_13, .hive_12 .cell_12, .hive_12 .cell_11, .hive_12 .cell_9, .hive_12 .cell_8, .hive_12 .cell_7, .hive_12 .cell_6, .hive_12 .cell_5, .hive_12 .cell_4, .hive_12 .cell_3, .hive_12 .cell_2, .hive_12 .cell_1 { width: 100%; margin: 0; }
-  .hive_12 .cell_10 { width: 66.6%; }
+  .hive_12 .cell_16, .hive_12 .cell_15, .hive_12 .cell_14, .hive_12 .cell_13, .hive_12 .cell_12, .hive_12 .cell_11, .hive_12 .cell_10, .hive_12 .cell_9, .hive_12 .cell_8, .hive_12 .cell_7, .hive_12 .cell_6, .hive_12 .cell_5, .hive_12 .cell_4, .hive_12 .cell_3, .hive_12 .cell_2, .hive_12 .cell_1 { width: 100%; margin: 0; }
+  .hive_12 .cell_10 { width: 66.5%; }
   .hive_12 .cell_2 { width: 33.3%; }
   .hive_12 .cell_9, .hive_12 .cell_13 { width: 75%; }
   .hive_12 .cell_6 { width: 50%; }
   .hive_12 .cell_3 { width: 25%; }
-  .hive_16 .cell_16, .hive_16 .cell_15, .hive_16 .cell_14, .hive_16 .cell_13, .hive_16 .cell_12, .hive_16 .cell_11, .hive_16 .cell_9, .hive_16 .cell_8, .hive_16 .cell_7, .hive_16 .cell_6, .hive_16 .cell_5, .hive_16 .cell_4, .hive_16 .cell_3, .hive_16 .cell_2, .hive_16 .cell_1 { width: 100%; margin: 0; }
+  .hive_16 .cell_16, .hive_16 .cell_15, .hive_16 .cell_14, .hive_16 .cell_13, .hive_16 .cell_12, .hive_16 .cell_11, .hive_16 .cell_10, .hive_16 .cell_9, .hive_16 .cell_8, .hive_16 .cell_7, .hive_16 .cell_6, .hive_16 .cell_5, .hive_16 .cell_4, .hive_16 .cell_3, .hive_16 .cell_2, .hive_16 .cell_1 { width: 100%; margin: 0; }
   .hive_16 .cell_12 { width: 75%; }
   .hive_16 .cell_10 { width: 65%; }
   .hive_16 .cell_6 { width: 35%; }
