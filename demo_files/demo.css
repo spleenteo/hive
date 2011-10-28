@@ -1,0 +1,24 @@
+body { font-family: Arial; font-size: 0.8em; background-image: url("bg.jpg"); color: #000; padding-bottom: 30px; margin: 0; }
+body:after { display: block; position: fixed; bottom: 0; height: 20px; background-color: rgba(50, 50, 50, 0.6); width: 100%; line-height: 20px; color: #fff; font-size: 11px; text-align: center; }
+
+section { display: block; border: 1px solid gray; min-height: 30px; font-family: Arial; font-size: 10px; line-height: 30px; text-align: center; margin-bottom: 10px; background-color: rgba(255, 255, 255, 0.75); }
+
+h1, h2, p { padding: 4px; }
+
+h1, h2 { letter-spacing: -0.09em; }
+
+h1 { font-size: 4.5em; margin: 3px; }
+
+/* SETTING FOR SMARTPHONES PORTRAIT AND LANDSCAPE until the browser is at a maximum of 480 */
+@media only screen and (max-width: 480px) { body:after { background-color: rgba(128, 0, 128, 0.75); content: "this design respond to SMARTPHONES landscape and portrait orientation"; } }
+
+/* SETTING FOR PORTRAIT TABLET until the browser is at a maximum of 1000 */
+@media only screen and (min-width: 481px) and (max-width: 1000px) { body:after { background-color: rgba(0, 128, 0, 0.75); content: "this design respond to TABLETS landscape and portrait orientation"; } }
+
+/* SETTING FOR DESKTOP until the browser is between 1000px and a maximum of 1499 */
+@media only screen and (min-width: 1000px) and (max-width: 1499px) { body:after { background-color: rgba(255, 0, 0, 0.75); content: "this design respond to DESKTOP size"; }
+  .hive_12, .hive_16 { max-width: 960px; margin: auto; } }
+
+/* WIDE DESKTOP OR TV */
+@media screen and (min-width: 1500px) { body:after { background-color: rgba(0, 128, 0, 0.75); content: "this design respond to CINEMA DISPLAY size"; }
+  .hive_12, .hive_16 { max-width: 80%; margin: auto; } }
