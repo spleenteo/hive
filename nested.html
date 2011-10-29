@@ -1,0 +1,97 @@
+<!doctype html>
+<!--[if IE 7 ]>    <html class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+
+<head>
+    <title>HIVE SCSS demo grid spleenteo/hive @ GitHub</title>
+    
+    <meta charset="UTF-8">
+    <meta name="description" content="the demo grid for hive scss">
+    <meta name="author" content="Matteo Papadopoulos aka @spleenteo">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="hive.css">
+    <link rel="stylesheet" href="demo_files/demo.css">
+</head>
+
+<body id="nested">
+<div class="hive_12">
+    <hgroup class="cell_12">
+        <h1>Hive Scss Responsive Grid Layout</h1>
+    </hgroup>
+    <div class="cell_6">
+        <article>
+            <h2>Cells and nested cells experiment</h2>
+            <p>Just some test to understand how hive resond to nested cells. Whats going on when children are displayed on mobiles or on a media query breakup?</p>
+            <a class="cell_12 jumper" href="index.html">Back to the main demo page</a>
+            
+        </article>
+    </div>
+    <div class="cell_3 pre_3">
+        <section class="downlaod">
+            <h2>Link</h2>
+<a href="http://github.com/spleenteo/hive"><img style="position: absolute; top: 20px; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+<a href="http://github.com/spleenteo/hive/zipball/master">
+    <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
+    <a href="http://github.com/spleenteo/hive/tarball/master">
+      <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
+            <ul>
+                <li><a href="https://github.com/spleenteo/hive">Hive on GitHub</a></li>
+                <li><a href="http://twitter.com/#!/spleenteo">Follow on twitter</a></li>
+            </ul>
+        </section>
+    </div>
+</div>
+    
+<div class="hive_12">
+    <h1>12 columns grid with children</h1>
+    <div class="wrapper clearfix">
+        <p>This is some content in the main hive, no cells declared. This has 10px padding</p>
+        <h2>Scenario 1: An header with menu</h2>
+        <div class="cell_12">
+            <section class="nested_cells">
+                <p>This is content of the 12 columns cell with 10px padding. I want now to put 4 cells (4 x cell_3 as we are in a 12 columns hive). The blue UL and olive LI have 3px padding</p>
+                <ul class="clearfix">
+                    <li class="cell_3"><div>a cell_3 item</div></li>
+                    <li class="cell_3"><div>a cell_3 item</div></li>
+                    <li class="cell_3"><div>a cell_3 item</div></li>
+                    <li class="cell_3"><div>a cell_3 item</div></li>
+                </ul>
+            </section>            
+        </div>
+
+        <h2>Scenario a: a 2 columns layout with 2 columns in the first one on the left</h2>
+        <p>I'm giving 10px padding to all elements justo to show'em better and to see how padding doesn't matter with column width</p>
+        
+        <div class="cell_8">
+            <section class="left_col clearfix">
+                The column on the left with 2 columns inside 50% width (cell_6)
+                <div class="cell_6">
+                    <section>This is the first subcolumn</section>
+                </div>
+                <div class="cell_6">
+                    <section>This is the second subcolumn</section>
+                </div>
+            </section>
+        </div>
+        <div class="cell_4">
+            <section class="right_col">
+                The column on the right
+            </section>
+            
+        </div>
+        
+    </div>
+</div>
+
+<div class="hive_12">
+    <div class="cell_12">
+        <footer>credits: <a href="http://www.basictrading.biz" target="_blank">Matteo Papadopoulos aka @spleenteo</a> - <a href="http://twitter.com/#!/spleenteo" target="_blank">follow</a> me on twitter - <a href="https://github.com/spleenteo/hive">Fork or download</a> this project on GitHub
+</footer>
+    </div>
+</div>
+
+</body>

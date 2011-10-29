@@ -35,16 +35,65 @@ pre { background: #000; color: #fff; padding: 15px;}
     }
 }
 
-
+#nested{
+    .wrapper{
+        padding: 10px;
+        border: 1px solid green;
+    }
+    .nested_cells{
+        border: 1px solid red;
+        padding: 10px;
+        margin-bottom: 10px;
+        ul{
+            border: 1px solid blue;
+            margin: 0;
+            padding: 2px;
+            
+            li{
+                >div{
+                    border: 1px solid olive;
+                    padding: 3px;
+                }
+            }
+        }
+    }
+    .left_col, .right_col{
+        border: 1px solid gray;
+        padding: 10px;
+        section{
+        }
+    }
+    .left_col{
+        section{
+            border: 1px solid orange;
+            padding: 10px;
+            margin-top: 5px;
+        }
+    }
+    
+}
 h1, h2, p{
     padding: 4px;
 }
 h1, h2{
     letter-spacing: -0.09em;
+    margin: 0;
 }
 h1{
     font-size: 4.5em;
     margin: 3px;
+}
+footer{
+    margin-top: 20px;
+    padding: 10px;
+}
+.jumper{
+    line-height: 30px;
+    background-color: orange;
+    text-align: center;
+    font-weight: bold;
+    color: #000;
+    text-shadow: 1px 0px #fff;
 }
 /* SETTING FOR SMARTPHONES PORTRAIT AND LANDSCAPE until the browser is at a maximum of 480 */
 @media only screen and (max-width: 767px){
