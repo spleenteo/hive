@@ -1,5 +1,7 @@
-body { font-family: Arial; font-size: 0.8em; background-image: url("bg.jpg"); color: #000; padding-bottom: 30px; margin: 0; }
-body:after { display: block; position: fixed; bottom: 0; height: 20px; background-color: rgba(50, 50, 50, 0.6); width: 100%; line-height: 20px; color: #fff; font-size: 11px; text-align: center; }
+body { font-family: Arial; font-size: 0.8em; background-image: url("bg.jpg"); color: #000; padding-top: 30px; margin: 0; }
+body:after { display: block; position: absolute; top: 0; height: 20px; background-color: rgba(50, 50, 50, 0.6); width: 100%; line-height: 20px; color: #fff; font-size: 11px; text-align: center; }
+
+pre { background: #000; color: #fff; padding: 15px; }
 
 .the_demo_grid section { display: block; border: 1px solid gray; min-height: 30px; font-family: Arial; font-size: 10px; line-height: 30px; text-align: center; margin-bottom: 10px; background-color: rgba(255, 255, 255, 0.75); }
 
@@ -15,7 +17,7 @@ h1 { font-size: 4.5em; margin: 3px; }
 @media only screen and (max-width: 480px) { body:after { background-color: rgba(128, 0, 128, 0.75); content: "this design respond to SMARTPHONES landscape and portrait orientation"; } }
 
 /* SETTING FOR PORTRAIT TABLET until the browser is at a maximum of 1000 */
-@media only screen and (min-width: 481px) and (max-width: 1000px) { body:after { background-color: rgba(0, 128, 0, 0.75); content: "this design respond to TABLETS landscape and portrait orientation"; }
+@media only screen and (min-width: 481px) and (max-width: 1000px) { body:after { background-color: rgba(0, 128, 0, 0.75); content: "this design respond to TABLETS portrait orientation"; }
   h1 { font-size: 3em; margin: 3px; } }
 
 /* SETTING FOR DESKTOP until the browser is between 1000px and a maximum of 1499 */

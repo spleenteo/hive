@@ -3,12 +3,12 @@ body{
     font-size: 0.8em;
     background-image: url("bg.jpg");
     color: #000;
-    padding-bottom: 30px;
+    padding-top: 30px;
     margin: 0;
     &:after{
         display: block;
-        position: fixed;
-        bottom: 0;
+        position: absolute;
+        top: 0;
         height: 20px;
         background-color: rgba(50,50,50,0.6);
         width: 100%;
@@ -18,6 +18,8 @@ body{
         text-align: center;
     }
 }
+
+pre { background: #000; color: #fff; padding: 15px;}
 
 .the_demo_grid{
     section{
@@ -67,7 +69,7 @@ h1{
     body{
         &:after{
             background-color: rgba(green, 0.75);
-            content: "this design respond to TABLETS landscape and portrait orientation";
+            content: "this design respond to TABLETS portrait orientation";
         }
     }
     h1{
