@@ -9,7 +9,8 @@
     <meta charset="UTF-8">
     <meta name="description" content="the demo grid for hive scss">
     <meta name="author" content="Matteo Papadopoulos aka @spleenteo">
-
+	<meta name="viewport" content="width=device-width">
+	
     <!-- STYLESHEETS -->
     <link rel="stylesheet" href="hive.css">
     <link rel="stylesheet" href="demo_files/demo.css">
@@ -18,13 +19,38 @@
 <body>
 <div class="hive_12">
     <hgroup class="cell_12">
-        <h1>Hive Scss Demo</h1>
-        <p>You should resize your browser in order to see the responsive effect. There are four sizes: 420px, 680px, 960px, 1500px</p>
-        <h2>12 columns grid</h2>
+        <h1>Hive Scss Responsive Grid Layout</h1>
     </hgroup>
+    <div class="cell_6">
+        <article>
+            <h2>What the hive is this?!</h2>
+            <p>We are in the "<strong>responsive</strong>" Era! So many devices that we cannot design for specific sizes or smartphone/tablets models. Bees are able to build a hive as a pattern based on their number and on the stage they are going to do it. A grid layout should be almost the same. So I wrote some media queries to broke the layout on four different sizes: <strong>smartphone portrait, landscape, tablets portrait, desktop and cinema display.</strong></p>            
+        </article>
+    </div>
+    <div class="cell_3">
+        <section>
+            <h2>Features</h2>
+            <ul>
+                <li>Fluid and fixed layout (desktop size)!</li>
+                <li>Can change the % of the grid on scss</li>
+                <li>Nested cell ready without alpha/omega</li>
+                <li>pre and post spaces</li>
+            </ul>
+        </section>
+    </div>
+    <div class="cell_3">
+        <section class="downlaod">
+            <h2>Link</h2>
+            <ul>
+                <li><a href="https://github.com/spleenteo/hive">Hive on GitHub</a></li>
+                <li><a href="http://twitter.com/#!/spleenteo">Follow on twitter</a></li>
+            </ul>
+        </section>
+    </div>
 </div>
     
-<div class="hive_12 clearfix">
+<div class="hive_12 clearfix the_demo_grid">
+    <h2>12 columns grid</h2>
     <div class="cell_12"><section>cell 12</section></div>
     <div class="cell_12">
         <section>
@@ -98,7 +124,8 @@
 <div class="hive_12">
     <h2>16 columns grid</h2>
 </div>
-<div class="hive_16">
+
+<div class="hive_16 the_demo_grid">
     <div class="cell_16"><section>cell 16</section></div>
     
     <div class="cell_15"><section>cell 15</section></div>

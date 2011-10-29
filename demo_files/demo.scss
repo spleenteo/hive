@@ -19,16 +19,18 @@ body{
     }
 }
 
-section{
-    display: block;
-    border: 1px solid gray;
-    min-height: 30px;
-    font-family: Arial;
-    font-size: 10px;
-    line-height: 30px;
-    text-align: center;
-    margin-bottom: 10px;
-    background-color: rgba(255,255,255,0.75);
+.the_demo_grid{
+    section{
+        display: block;
+        border: 1px solid gray;
+        min-height: 30px;
+        font-family: Arial;
+        font-size: 10px;
+        line-height: 30px;
+        text-align: center;
+        margin-bottom: 10px;
+        background-color: rgba(255,255,255,0.75);
+    }
 }
 
 
@@ -43,6 +45,13 @@ h1{
     margin: 3px;
 }
 /* SETTING FOR SMARTPHONES PORTRAIT AND LANDSCAPE until the browser is at a maximum of 480 */
+@media only screen and (max-width: 767px){
+    h1{
+        font-size: 2em;
+        margin: 3px;
+    }
+    
+}
 @media only screen and (max-width: 480px){
     body{
         &:after{
@@ -60,6 +69,10 @@ h1{
             background-color: rgba(green, 0.75);
             content: "this design respond to TABLETS landscape and portrait orientation";
         }
+    }
+    h1{
+        font-size: 3em;
+        margin: 3px;
     }
 }
 
