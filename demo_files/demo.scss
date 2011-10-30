@@ -40,6 +40,13 @@ pre { background: #000; color: #fff; padding: 15px;}
         padding: 10px;
         border: 1px solid green;
     }
+    > div{
+        section, footer{
+            border: 1px solid gray;
+            margin: 0;
+            padding: 10px;
+        }
+    }
     .nested_cells{
         border: 1px solid red;
         padding: 10px;
@@ -68,6 +75,18 @@ pre { background: #000; color: #fff; padding: 15px;}
             border: 1px solid orange;
             padding: 10px;
             margin-top: 5px;
+        }
+    }
+    ul.menu{
+        border: 1px solid blue;
+        margin: 0;
+        padding: 2px;
+        
+        li{
+            >div{
+                border: 1px solid olive;
+                padding: 3px;
+            }
         }
     }
     
