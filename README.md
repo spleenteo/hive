@@ -16,7 +16,7 @@ This system is written in SCSS but the repo includes a ready to use CSS file.
 Features
 --------
 
-* SCSS grid system
+* SCSS/SASS grid system
 * no gutter between columns
 * Responsive ready for mobile / tablets / desktop / cinema display design
 * variable fluid template structure (you can changed it on the fly)
