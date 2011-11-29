@@ -40,6 +40,9 @@ In Hive there is the same basic concept with different names:
 
 * .hive_12 and .hive_16 for containers
 * .cell_[from 1 to 12/16] for grids
+* .tryptich is basicly a .cell_12 that can include three .cell_4 splitting the container in 3 boxes
+
+We have to use a tryptich class because .cell_4 is not a 33,3333% when it's combine with other sizes (ex class_8 + class_4) and it became a full width on small sizes. In this way we can say we want a three sides division untill portrait smartphones.
 
 Example
 -------
@@ -62,6 +65,17 @@ Example
                 <article>
                     wide content
                 </article>
+            </div>
+            <div class="tryptich">
+                <div class="cell_4">
+                    one third box
+                </div>
+                <div class="cell_4">
+                    one third box
+                </div>
+                <div class="cell_4">
+                    one third box
+                </div>
             </div>
         </div>
     </body>
