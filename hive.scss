@@ -1,6 +1,5 @@
 /** HIVE SCSS YET ANOTHER RESPONSIVE GRID SYSTEM
- ** THX TO 960 GRID
- ** Written by Matteo Papadopoulos aka @spleenteo on twitter
+ ** Author Matteo Papadopoulos aka @spleenteo on twitter
  ** http://www.basictrading.biz 
  **/
 
@@ -20,6 +19,7 @@ $unit_16: 100% / 16;
     .cell_1, .cell_2, .cell_3, .cell_4, .cell_5, .cell_6, .cell_7, .cell_8, .cell_9, .cell_10, .cell_11, .cell_12, .cell_13, .cell_14, .cell_15, .cell_16 {
         display: inline;
         float: left;
+        position: relative;
     }
 }
 .hive_12{
@@ -78,30 +78,8 @@ $unit_16: 100% / 16;
     display: block
 }
 
-
-
-/* SETTING FOR SMARTPHONES PORTRAIT AND LANDSCAPE until the browser is at a maximum of 480 */
-@media only screen and (max-width: 480px){
-    .hive_12, .hive_16{
-        padding: 0;
-        width: 100%;
-        margin: 0;
-        .cell_16, .cell_15, .cell_14, .cell_13, .cell_12, .cell_10, .cell_11, .cell_9, .cell_8, .cell_7, .cell_6, .cell_5, .cell_4, .cell_3, .cell_2, .cell_1{
-            width: 100%;
-            margin: 0;
-        }
-        @for $i from 1 through 16 {
-          .pre_#{$i} { padding-left: 0; }
-        }
-        @for $i from 1 through 16 {
-          .post_#{$i} { padding-right: 0; }
-        }
-        
-    }
-}
-
-/* SETTING FOR PORTRAIT TABLET until the browser is at a maximum of 1000 */
-@media only screen and (min-width: 481px) and (max-width: 1000px){
+/* FOR SMARTPHONE LANDSCAPE AND TABLET PORTRAIT ONLY */
+@media only screen and (min-width: 400px) and (max-width: 1023px){
     .hive_12{
         .cell_12, .cell_11, .cell_10, .cell_9, .cell_8, .cell_7, .cell_6, .cell_5, .cell_4, .cell_3, .cell_2, .cell_1{
             width: 100%;
@@ -130,6 +108,12 @@ $unit_16: 100% / 16;
         .cell_10.pre_2, .cell_10.post_2, .cell_9.pre_3, .cell_9.post_3, .cell_2.pre_8, .cell_2.post_8, .cell_3.pre_9, .cell_3.post_9{
             width: 100%;
         }
+        .tryptich{
+            @extend .cell_12;
+            .cell_4{
+                width: 33.33333333%;
+            }
+        }
     }
     .hive_16{
         .cell_16, .cell_15, .cell_14, .cell_13, .cell_12, .cell_11,  .cell_10, .cell_9, .cell_8, .cell_7, .cell_6, .cell_5, .cell_4, .cell_3, .cell_2, .cell_1{
@@ -153,7 +137,6 @@ $unit_16: 100% / 16;
          .cell_12.pre_4, .cell_12.post_4, .cell_10.pre_6, .cell_10.post_6, .cell_6.pre_10, .cell_6.post_10, .cell_8.pre_8, .cell_8.post_8,  .cell_9.pre_7, .cell_9.post_7, .cell_7.pre_9, .cell_7.post_9{
              width: 100%;
          }
-         
     }
     .hive_12, .hive_16{
         @for $i from 1 through 12 {
@@ -165,55 +148,35 @@ $unit_16: 100% / 16;
     }
 }
 
-/* SETTING FOR PORTRAIT TABLET until the browser is at a maximum of 1000 */
-@media only screen and (min-width: 1000px) and (max-width: 1499px){
+/* SMARTPHONE PORTRAIT */
+@media only screen and (max-width: 320px){
+    .hive_12, .hive_16{
+        padding: 0;
+        width: 100%;
+        margin: 0;
+        .cell_16, .cell_15, .cell_14, .cell_13, .cell_12, .cell_10, .cell_11, .cell_9, .cell_8, .cell_7, .cell_6, .cell_5, .cell_4, .cell_3, .cell_2, .cell_1{
+            width: 100%;
+            margin: 0;
+        }
+        @for $i from 1 through 16 {
+          .pre_#{$i} { padding-left: 0; }
+        }
+        @for $i from 1 through 16 {
+          .post_#{$i} { padding-right: 0; }
+        }
+    }
+}
+/* TABLET LANSDSCAPE or DESKTOP ONLY */
+@media only screen and (min-width: 1024px) and (max-width: 1499px){
     .hive_12, .hive_16{
         max-width: 960px;
         margin: auto;
-    }    
+    }
 }
-
-/* WIDE DESKTOP OR TV */
-@media screen and (min-width: 1500px) {
+/* CINEMA DISPLAY OR WEB TV */
+@media only screen and (min-width: 1500px){
     .hive_12, .hive_16{
         max-width: 80%;
         margin: auto;
     }
 }
-
-
-// this is just a template for 4 breaks for different devices and views
-
-/* smaller then 480 (SMARTPHONES PORTRAIT) */
-@media only screen and (max-width: 480px){
-	
-}
-
-/* between 480 and 1000 (SMARTPHONES LANDSCAPE) */
-@media only screen and (min-width: 481px) and (max-width: 1000px){
-	
-}
-
-/* smaller then 720 */
-@media only screen and (max-width: 1000px){
-	
-}
-
-
-/* over 1000px (DESKTOP OR TABLETS LANDSCAPE AND CINEMA DISPLAY) */
-@media only screen and (min-width: 1000px){
-}
-
-
-/* between 1000 and 1500 (DESKTOP OR TABLETS LANDSCAPE) */
-@media only screen and (min-width: 1000px) and (max-width: 1499px){
-
-}
-
-/* over 1500 (WEB TV CINEMA DISPLAY) */
-@media screen and (min-width: 1500px) {
-
-}
-
-
-
