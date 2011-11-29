@@ -21,6 +21,9 @@ body{
 
 pre { background: #000; color: #fff; padding: 15px;}
 
+.downlaod{
+    background-color: rgba(#fff, 0.7);
+}
 .the_demo_grid{
     section{
         display: block;
@@ -39,6 +42,7 @@ pre { background: #000; color: #fff; padding: 15px;}
     .wrapper{
         padding: 10px;
         border: 1px solid green;
+        background-color: rgba(#fff, 0.7);
     }
     > div{
         section, footer{
