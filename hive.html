@@ -1,0 +1,91 @@
+<!doctype html>
+<!--[if IE 7 ]>    <html class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+
+<head>
+    <title>HIVE SCSS demo grid spleenteo/hive @ GitHub</title>
+    
+    <meta charset="UTF-8">
+    <meta name="description" content="the demo grid for hive scss">
+    <meta name="author" content="Matteo Papadopoulos aka @spleenteo">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="css/hive.css">
+    <link rel="stylesheet" href="css/mq_debug.css">
+
+    <style>
+        body{
+            font-family: arial;
+            font-size: 10px;
+        }
+        section{
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px 20%;
+            margin: 2px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+<div class="hive">
+    <h2>Basic usage</h2>
+    <div class="cell_100">
+        <section>cell_100</section>
+    </div>
+
+    <div class="cell_50">
+        <section>cell_50</section>
+    </div>
+    <div class="cell_50">
+        <section>cell_50</section>
+    </div>
+
+
+    <div class="cell_70">
+        <section>cell_70</section>
+    </div>
+    <div class="cell_30">
+        <section>cell_30</section>
+    </div>
+
+    <h2>Nested usage</h2>
+    <div class="cell_70">
+        <section>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</section> 
+
+        <div class="cell_50">
+            <section>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</section>
+        </div>
+        
+        <div class="cell_50">
+            <section>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</section>
+        </div>
+    </div>
+
+    <div class="cell_30">
+        <section>cell_30</section>
+    </div>        
+</div>
+
+</body>
+</html>

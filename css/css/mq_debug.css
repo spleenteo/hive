@@ -1,0 +1,22 @@
+/*
+** THE RESPONSIVE TABLE
+** author: Matteo Papadopoulos (@spleenteo) http://www.basictrading.biz
+** Project on GitHub: https://github.com/spleenteo/spleen_scss
+**
+** HOW TO ACTIVATE DEVELOPMENT MODE
+** Copy and Paste the following line of code into your main stylesheet
+** @import "mq_debug"; // a simple media query debug library
+** to verify wich is the viewport size you are currently browsing
+*/
+body:before { display: block; background-color: rgba(50, 50, 50, 0.6); width: 100%; min--height: 20px; color: #fff; font-size: 11px; text-align: center; padding: 5px; border-bottom: 1px solid #fff; }
+
+/* SMARTPHONE PORTRAIT */
+@media only screen and (max-width: 320px) { body:before { background-color: rgba(128, 0, 128, 0.75); content: "SMARTPHONE PORTRAIT"; } }
+/* SMARTPHONES LANDSCAPE ONLY */
+@media only screen and (min-width: 321px) and (max-width: 719px) { body:before { background-color: rgba(255, 0, 0, 0.75); content: "SMARTPHONES LANDSCAPE ONLY"; } }
+/* TABLET PORTRAIL ONLY */
+@media only screen and (min-width: 720px) and (max-width: 1023px) { body:before { background-color: rgba(255, 255, 0, 0.75); content: "TABLET PORTRAIL ONLY"; } }
+/* TABLET LANSDSCAPE or DESKTOP ONLY */
+@media only screen and (min-width: 1024px) and (max-width: 1499px) { body:before { background-color: rgba(0, 0, 0, 0.75); content: "TABLET LANSDSCAPE or DESKTOP ONLY"; } }
+/* CINEMA DISPLAY OR WEB TV */
+@media only screen and (min-width: 1500px) { body:before { background-color: rgba(128, 128, 0, 0.75); content: "CINEMA DISPLAY OR WEB TV"; } }

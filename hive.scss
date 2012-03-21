@@ -10,47 +10,39 @@ $width: 100%;     /* set the desired fixed width in pixels or %  */
 // these are assumed to modify the margin in fixed layout
 $unit_12: 100% / 12;
 $unit_16: 100% / 16;
+$unit: $width / 10;
 
-.hive_12, .hive_16 {
+.hive{
     @extend .clearfix;
     width: $width;
     margin-left: (100% - $width)/2;
     margin-right: (100% - $width)/2;
-    .cell_1, .cell_2, .cell_3, .cell_4, .cell_5, .cell_6, .cell_7, .cell_8, .cell_9, .cell_10, .cell_11, .cell_12, .cell_13, .cell_14, .cell_15, .cell_16 {
+    .cell_10, .cell_20, .cell_25, .cell_33, .cell_30, .cell_40, .cell_50, .cell_60, .cell_70, .cell_80, .cell_90, .cell_100{
         display: inline;
         float: left;
         position: relative;
     }
-}
-.hive_12{
-    @for $i from 1 through 12 {
-      .cell_#{$i} { width: $unit_12 * $i; }
+
+    @for $i from 1 through 10 {
+      .cell_#{$i * 10} { width: $unit * $i; }
     }
-    @for $i from 1 through 12 {
-      .pre_#{$i} { padding-left: $unit_12 * $i; }
+    .cell_25{ width: $width / 4; }
+    .cell_33{ width: $width / 3; }
+
+    @for $i from 1 through 10 {
+      .pre_#{$i * 10} { width: $unit * $i; }
     }
-    @for $i from 1 through 12 {
-      .post_#{$i} { padding-right: $unit_12 * $i; }
+    .pre_25{ width: $width / 4; }
+    .pre_33{ width: $width / 3; }
+
+    @for $i from 1 through 10 {
+      .post_#{$i * 10} { width: $unit * $i; }
     }
-}
-.hive_16{
-    @for $i from 1 through 16 {
-      .cell_#{$i} { width: $unit_16 * $i; }
-    }
-    @for $i from 1 through 16 {
-      .pre_#{$i} { padding-left: $unit_16 * $i; }
-    }
-    @for $i from 1 through 16 {
-      .post_#{$i} { padding-right: $unit_16 * $i; }
-    }
+    .post_25{ width: $width / 4; }
+    .post_33{ width: $width / 3; }
 
 }
-.alpha {
-    margin-left: 0;
-}
-.omega {
-    margin-right: 0;
-}
+
 .clear {
     clear: both;
     display: block;
@@ -71,12 +63,106 @@ $unit_16: 100% / 16;
 }
 .clearfix {
     display: inline-block
-} * html.clearfix {
+} 
+* html.clearfix {
     height: 1%;
 }
 .clearfix {
     display: block
 }
+
+/* SMALLER THAN */
+/****************************************************************************/
+
+/* SMALLER THAN TABLET LANDSCAPE */
+@media only screen and (max-width: 719px){
+    
+}
+/* SMALLER THAN DESKTOP OR TABLET PORTRAIT */
+@media only screen and (max-width: 1023px){
+    
+}
+/* smaller then 1499 (SMALLER THAN CINEMA DISPLAY) */
+@media only screen and (max-width: 1499px){
+    
+}
+
+/* BETWEEN SIZES */
+/****************************************************************************/
+/* FOR SMARTPHONE LANDSCAPE AND TABLET PORTRAIT ONLY */
+@media only screen and (min-width: 321px) and (max-width: 1023px){
+
+}
+/* FOR TABLET PORTRAIT AND DESKTOP ONLY */
+@media only screen and (min-width: 720px) and (max-width: 1499px){
+
+}
+/* FOR SMARTPHONE LANDSCAPE, TABLET PORTRAIT AND DESKTOP ONLY */
+@media only screen and (min-width: 321px) and (max-width: 1499px){
+
+}
+
+/* BIGGER THAN */
+/****************************************************************************/
+/* FROM SMARTPHONES LANDSCAPE TO BIGGER */
+@media only screen and (min-width: 321px){
+    
+}
+/* FROM TABLET PORTRAIT TO BIGGER */
+@media only screen and (min-width: 720px){
+    
+}
+/* FROM TABLET LANDSCAPE TO BIGGER */
+@media only screen and (min-width: 1024px){
+    
+}
+
+/* EXACT SIZES */
+/****************************************************************************/
+/* SMARTPHONE PORTRAIT */
+@media only screen and (max-width: 320px){
+    
+}
+/* SMARTPHONES LANDSCAPE ONLY */
+@media only screen and (min-width: 321px) and (max-width: 719px){
+
+}
+/* TABLET PORTRAIL ONLY */
+@media only screen and (min-width: 720px) and (max-width: 1023px){
+
+}
+/* TABLET LANSDSCAPE or DESKTOP ONLY */
+@media only screen and (min-width: 1024px) and (max-width: 1499px){
+
+}
+/* CINEMA DISPLAY OR WEB TV */
+@media only screen and (min-width: 1500px){
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* FOR SMARTPHONE LANDSCAPE AND TABLET PORTRAIT ONLY */
 @media only screen and (min-width: 400px) and (max-width: 1023px){
