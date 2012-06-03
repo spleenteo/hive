@@ -17,7 +17,7 @@ $unit: $width / 10;
     width: $width;
     margin-left: (100% - $width)/2;
     margin-right: (100% - $width)/2;
-    .cell_10, .cell_20, .cell_25, .cell_33, .cell_30, .cell_40, .cell_50, .cell_60, .cell_70, .cell_80, .cell_90, .cell_100{
+    .cell_10, .cell_20, .cell_25, .cell_30, .cell_33, .cell_40, .cell_50, .cell_60, .cell_66, .cell_70, .cell_75, .cell_80, .cell_90, .cell_100{
         display: inline;
         float: left;
         position: relative;
@@ -28,19 +28,26 @@ $unit: $width / 10;
     }
     .cell_25{ width: $width / 4; }
     .cell_33{ width: $width / 3; }
+    .cell_66{ width: ($width / 3) * 2; }
+    .cell_75{ width: ($width / 4) * 3; }
 
     @for $i from 1 through 10 {
-      .pre_#{$i * 10} { width: $unit * $i; }
+        .pre_#{$i * 10} {
+            padding-left: $unit * $i;
+        }
     }
-    .pre_25{ width: $width / 4; }
-    .pre_33{ width: $width / 3; }
+    .pre_25{ padding-left: $width / 4; }
+    .pre_33{ padding-left: $width / 3; }
+    .pre_66{ padding-left: ($width / 3) * 2; }
+    .pre_75{ padding-left: ($width / 4) * 3; }
 
     @for $i from 1 through 10 {
-      .post_#{$i * 10} { width: $unit * $i; }
+      .post_#{$i * 10} { padding-right: $unit * $i; }
     }
-    .post_25{ width: $width / 4; }
-    .post_33{ width: $width / 3; }
-
+    .post_25{ padding-right: $width / 4; }
+    .post_33{ padding-right: $width / 3; }
+    .post_66{ padding-right: ($width / 3) * 2; }
+    .post_75{ padding-right: ($width / 4) * 3; }
 }
 
 .clear {
@@ -51,32 +58,35 @@ $unit: $width / 10;
     width: 0;
     height: 0
 }
-.clearfix:after {
-    clear: both;
-    content: ' ';
-    display: block;
-    font-size: 0;
-    line-height: 0;
-    visibility: hidden;
-    width: 0;
-    height: 0
-}
+
 .clearfix {
-    display: inline-block
+    display: block;
+    &:after {
+        clear: both;
+        content: ' ';
+        display: block;
+        font-size: 0;
+        line-height: 0;
+        visibility: hidden;
+        width: 0;
+        height: 0
+    }
 } 
 * html.clearfix {
     height: 1%;
-}
-.clearfix {
-    display: block
 }
 
 /* SMALLER THAN */
 /****************************************************************************/
 
 /* SMALLER THAN TABLET LANDSCAPE */
-@media only screen and (max-width: 719px){
-    
+@media only screen and (max-width: 700px){
+    .hive{
+        .pre_10, .pre_20, .pre_25, .pre_30, .pre_33, .pre_40, .pre_50, .pre_60, .pre_66, .pre_70, .pre_75, .pre_80, .pre_90, .pre_100, .post_10, .post_20, .post_30, .post_33, .post_25, .post_40, .post_50, .post_60, .post_66, .post_70, .post_75, .post_80, .post_90, .post_100{
+            padding: 0;
+        }
+    }
+
 }
 /* SMALLER THAN DESKTOP OR TABLET PORTRAIT */
 @media only screen and (max-width: 1023px){
@@ -121,7 +131,11 @@ $unit: $width / 10;
 /****************************************************************************/
 /* SMARTPHONE PORTRAIT */
 @media only screen and (max-width: 320px){
-    
+    .hive{
+        .cell_10, .cell_20, .cell_25, .cell_30, .cell_33, .cell_40, .cell_50, .cell_60, .cell_66, .cell_70, .cell_75, .cell_80, .cell_90, .cell_100{
+            width: 100%;
+        }
+    }
 }
 /* SMARTPHONES LANDSCAPE ONLY */
 @media only screen and (min-width: 321px) and (max-width: 719px){
@@ -133,7 +147,10 @@ $unit: $width / 10;
 }
 /* TABLET LANSDSCAPE or DESKTOP ONLY */
 @media only screen and (min-width: 1024px) and (max-width: 1499px){
-
+    .hive{
+        max-width: 960px;
+        margin: auto;
+    }
 }
 /* CINEMA DISPLAY OR WEB TV */
 @media only screen and (min-width: 1500px){
@@ -254,10 +271,7 @@ $unit: $width / 10;
 }
 /* TABLET LANSDSCAPE or DESKTOP ONLY */
 @media only screen and (min-width: 1024px) and (max-width: 1499px){
-    .hive_12, .hive_16{
-        max-width: 960px;
-        margin: auto;
-    }
+
 }
 /* CINEMA DISPLAY OR WEB TV */
 @media only screen and (min-width: 1500px){

@@ -1,7 +1,7 @@
 /** HIVE SCSS YET ANOTHER RESPONSIVE GRID SYSTEM * Author Matteo Papadopoulos aka @spleenteo on twitter * http://www.basictrading.biz  */
 /* set the desired fixed width in pixels or %  */
 .hive { width: 100%; margin-left: 0%; margin-right: 0%; }
-.hive .cell_10, .hive .cell_20, .hive .cell_25, .hive .cell_33, .hive .cell_30, .hive .cell_40, .hive .cell_50, .hive .cell_60, .hive .cell_70, .hive .cell_80, .hive .cell_90, .hive .cell_100 { display: inline; float: left; position: relative; }
+.hive .cell_10, .hive .cell_20, .hive .cell_25, .hive .cell_30, .hive .cell_33, .hive .cell_40, .hive .cell_50, .hive .cell_60, .hive .cell_66, .hive .cell_70, .hive .cell_75, .hive .cell_80, .hive .cell_90, .hive .cell_100 { display: inline; float: left; position: relative; }
 .hive .cell_10 { width: 10%; }
 .hive .cell_20 { width: 20%; }
 .hive .cell_30 { width: 30%; }
@@ -14,44 +14,48 @@
 .hive .cell_100 { width: 100%; }
 .hive .cell_25 { width: 25%; }
 .hive .cell_33 { width: 33.333%; }
-.hive .pre_10 { width: 10%; }
-.hive .pre_20 { width: 20%; }
-.hive .pre_30 { width: 30%; }
-.hive .pre_40 { width: 40%; }
-.hive .pre_50 { width: 50%; }
-.hive .pre_60 { width: 60%; }
-.hive .pre_70 { width: 70%; }
-.hive .pre_80 { width: 80%; }
-.hive .pre_90 { width: 90%; }
-.hive .pre_100 { width: 100%; }
-.hive .pre_25 { width: 25%; }
-.hive .pre_33 { width: 33.333%; }
-.hive .post_10 { width: 10%; }
-.hive .post_20 { width: 20%; }
-.hive .post_30 { width: 30%; }
-.hive .post_40 { width: 40%; }
-.hive .post_50 { width: 50%; }
-.hive .post_60 { width: 60%; }
-.hive .post_70 { width: 70%; }
-.hive .post_80 { width: 80%; }
-.hive .post_90 { width: 90%; }
-.hive .post_100 { width: 100%; }
-.hive .post_25 { width: 25%; }
-.hive .post_33 { width: 33.333%; }
+.hive .cell_66 { width: 66.667%; }
+.hive .cell_75 { width: 75%; }
+.hive .pre_10 { padding-left: 10%; }
+.hive .pre_20 { padding-left: 20%; }
+.hive .pre_30 { padding-left: 30%; }
+.hive .pre_40 { padding-left: 40%; }
+.hive .pre_50 { padding-left: 50%; }
+.hive .pre_60 { padding-left: 60%; }
+.hive .pre_70 { padding-left: 70%; }
+.hive .pre_80 { padding-left: 80%; }
+.hive .pre_90 { padding-left: 90%; }
+.hive .pre_100 { padding-left: 100%; }
+.hive .pre_25 { padding-left: 25%; }
+.hive .pre_33 { padding-left: 33.333%; }
+.hive .pre_66 { padding-left: 66.667%; }
+.hive .pre_75 { padding-left: 75%; }
+.hive .post_10 { padding-right: 10%; }
+.hive .post_20 { padding-right: 20%; }
+.hive .post_30 { padding-right: 30%; }
+.hive .post_40 { padding-right: 40%; }
+.hive .post_50 { padding-right: 50%; }
+.hive .post_60 { padding-right: 60%; }
+.hive .post_70 { padding-right: 70%; }
+.hive .post_80 { padding-right: 80%; }
+.hive .post_90 { padding-right: 90%; }
+.hive .post_100 { padding-right: 100%; }
+.hive .post_25 { padding-right: 25%; }
+.hive .post_33 { padding-right: 33.333%; }
+.hive .post_66 { padding-right: 66.667%; }
+.hive .post_75 { padding-right: 75%; }
 
 .clear { clear: both; display: block; overflow: hidden; visibility: hidden; width: 0; height: 0; }
 
+.clearfix, .hive { display: block; }
 .clearfix:after, .hive:after { clear: both; content: ' '; display: block; font-size: 0; line-height: 0; visibility: hidden; width: 0; height: 0; }
 
-.clearfix, .hive { display: inline-block; }
-
 * html.clearfix, * html.hive { height: 1%; }
-
-.clearfix, .hive { display: block; }
 
 /* SMALLER THAN */
 /****************************************************************************/
 /* SMALLER THAN TABLET LANDSCAPE */
+@media only screen and (max-width: 700px) { .hive .pre_10, .hive .pre_20, .hive .pre_25, .hive .pre_30, .hive .pre_33, .hive .pre_40, .hive .pre_50, .hive .pre_60, .hive .pre_66, .hive .pre_70, .hive .pre_75, .hive .pre_80, .hive .pre_90, .hive .pre_100, .hive .post_10, .hive .post_20, .hive .post_30, .hive .post_33, .hive .post_25, .hive .post_40, .hive .post_50, .hive .post_60, .hive .post_66, .hive .post_70, .hive .post_75, .hive .post_80, .hive .post_90, .hive .post_100 { padding: 0; } }
 /* SMALLER THAN DESKTOP OR TABLET PORTRAIT */
 /* smaller then 1499 (SMALLER THAN CINEMA DISPLAY) */
 /* BETWEEN SIZES */
@@ -67,9 +71,11 @@
 /* EXACT SIZES */
 /****************************************************************************/
 /* SMARTPHONE PORTRAIT */
+@media only screen and (max-width: 320px) { .hive .cell_10, .hive .cell_20, .hive .cell_25, .hive .cell_30, .hive .cell_33, .hive .cell_40, .hive .cell_50, .hive .cell_60, .hive .cell_66, .hive .cell_70, .hive .cell_75, .hive .cell_80, .hive .cell_90, .hive .cell_100 { width: 100%; } }
 /* SMARTPHONES LANDSCAPE ONLY */
 /* TABLET PORTRAIL ONLY */
 /* TABLET LANSDSCAPE or DESKTOP ONLY */
+@media only screen and (min-width: 1024px) and (max-width: 1499px) { .hive { max-width: 960px; margin: auto; } }
 /* CINEMA DISPLAY OR WEB TV */
 /* FOR SMARTPHONE LANDSCAPE AND TABLET PORTRAIT ONLY */
 @media only screen and (min-width: 400px) and (max-width: 1023px) { .hive_12 .cell_12, .hive_12 .tryptich, .hive_12 .cell_11, .hive_12 .cell_10, .hive_12 .cell_9, .hive_12 .cell_8, .hive_12 .cell_7, .hive_12 .cell_6, .hive_12 .cell_5, .hive_12 .cell_4, .hive_12 .cell_3, .hive_12 .cell_2, .hive_12 .cell_1 { width: 100%; }
@@ -149,6 +155,5 @@
   .hive_12 .post_15, .hive_16 .post_15 { padding-right: 0; }
   .hive_12 .post_16, .hive_16 .post_16 { padding-right: 0; } }
 /* TABLET LANSDSCAPE or DESKTOP ONLY */
-@media only screen and (min-width: 1024px) and (max-width: 1499px) { .hive_12, .hive_16 { max-width: 960px; margin: auto; } }
 /* CINEMA DISPLAY OR WEB TV */
 @media only screen and (min-width: 1500px) { .hive_12, .hive_16 { max-width: 80%; margin: auto; } }
