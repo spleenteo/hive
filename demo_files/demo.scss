@@ -5,6 +5,7 @@ body{
     color: #000;
     padding-top: 30px;
     margin: 0;
+
     &:after{
         display: block;
         position: absolute;
@@ -27,7 +28,7 @@ pre { background: #000; color: #fff; padding: 15px;}
 .the_demo_grid{
     section{
         display: block;
-        border: 1px solid gray;
+        border: 1px solid #ccc;
         min-height: 30px;
         font-family: Arial;
         font-size: 10px;
@@ -35,9 +36,11 @@ pre { background: #000; color: #fff; padding: 15px;}
         text-align: center;
         margin-bottom: 10px;
         background-color: rgba(255,255,255,0.75);
+        -moz-box-sizing: content-box;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
     }
 }
-
 #nested{
     .wrapper{
         padding: 10px;
@@ -49,6 +52,9 @@ pre { background: #000; color: #fff; padding: 15px;}
             border: 1px solid gray;
             margin: 0;
             padding: 10px;
+            -moz-box-sizing: content-box;
+            -webkit-box-sizing: content-box;
+            box-sizing: content-box;
         }
     }
     .nested_cells{

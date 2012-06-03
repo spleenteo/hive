@@ -5,10 +5,10 @@ pre { background: #000; color: #fff; padding: 15px; }
 
 .downlaod { background-color: rgba(255, 255, 255, 0.7); }
 
-.the_demo_grid section { display: block; border: 1px solid gray; min-height: 30px; font-family: Arial; font-size: 10px; line-height: 30px; text-align: center; margin-bottom: 10px; background-color: rgba(255, 255, 255, 0.75); }
+.the_demo_grid section { display: block; border: 1px solid #ccc; min-height: 30px; font-family: Arial; font-size: 10px; line-height: 30px; text-align: center; margin-bottom: 10px; background-color: rgba(255, 255, 255, 0.75); -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
 
 #nested .wrapper { padding: 10px; border: 1px solid green; background-color: rgba(255, 255, 255, 0.7); }
-#nested > div section, #nested > div footer { border: 1px solid gray; margin: 0; padding: 10px; }
+#nested > div section, #nested > div footer { border: 1px solid gray; margin: 0; padding: 10px; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
 #nested .nested_cells { border: 1px solid red; padding: 10px; margin-bottom: 10px; }
 #nested .nested_cells ul { border: 1px solid blue; margin: 0; padding: 2px; }
 #nested .nested_cells ul li > div { border: 1px solid olive; padding: 3px; }
