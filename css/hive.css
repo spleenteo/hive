@@ -1,5 +1,5 @@
 /** HIVE SCSS YET ANOTHER RESPONSIVE GRID SYSTEM * Author Matteo Papadopoulos aka @spleenteo on twitter * http://www.cantierecreativo.net */
-@media only screen and (max-width: 700px) { .hive .pre_10 { padding-left: 0; }
+@media only screen and (max-width: 680px) { .hive .pre_10 { padding-left: 0; }
   .hive .post_10 { padding-right: 0; }
   .hive .pre_20 { padding-left: 0; }
   .hive .post_20 { padding-right: 0; }
@@ -21,7 +21,7 @@
   .hive .post_100 { padding-right: 0; }
   .hive .post_25, .hive .pre_25, .hive .post_33, .hive .pre_33, .hive .post_66, .hive .pre_66, .hive .post_75, .hive .pre_75 { padding: 0 !important; } }
 @media only screen and (max-width: 5000px) { .hive { display: block; width: 100%; margin-left: 0%; margin-right: 0%; }
-  .hive:after { clear: both; content: ' '; display: block; font-size: 0; line-height: 0; visibility: hidden; width: 0; height: 0; }
+  .hive:after { clear: both; content: ' '; font-size: 0; line-height: 0; visibility: hidden; width: 0; height: 0; }
   .hive .cell_10, .hive .cell_20, .hive .cell_25, .hive .cell_30, .hive .cell_33, .hive .cell_40, .hive .cell_50, .hive .cell_60, .hive .cell_66, .hive .cell_70, .hive .cell_75, .hive .cell_80, .hive .cell_90, .hive .cell_100 { display: inline; float: left; position: relative; }
   .hive .cell_10 { width: 10%; }
   .hive .pre_10 { padding-left: 10%; }
@@ -76,7 +76,7 @@
   .hive .cell_90 { width: 100%; }
   .hive .cell_100 { width: 100%; }
   .hive .cell_25, .hive .cell_33, .hive .cell_66, .hive .cell_75 { width: 100%; } }
-@media only screen and (max-width: 720px) and (min-width: 321px) { .hive .cell_10 { width: 50%; }
+@media only screen and (max-width: 320px) and (min-width: 701px) { .hive .cell_10 { width: 50%; }
   .hive .cell_10.hived { width: 100%; }
   .hive .cell_20 { width: 50%; }
   .hive .cell_20.hived { width: 100%; }
@@ -94,5 +94,23 @@
   .hive .cell_80.hived { width: 100%; }
   .hive .cell_90 { width: 50%; }
   .hive .cell_90.hived { width: 100%; } }
-@media only screen and (min-width: 1024px) and (max-width: 1499px) { .hive { max-width: 960px; margin: auto; } }
+@media only screen and (min-width: 960px) and (max-width: 1499px) { .hive { max-width: 960px; margin: auto; } }
 @media only screen and (min-width: 1500px) { .hive { max-width: 960px; margin: auto; } }
+.box_style, .box_1, .box_2, .box_3, .box_4, .box_5, .box_6, .box_7, .box_8 { margin: 5px 0 0 5px; }
+.box_style > section, .box_1 > section, .box_2 > section, .box_3 > section, .box_4 > section, .box_5 > section, .box_6 > section, .box_7 > section, .box_8 > section, .box_style div, .box_1 div, .box_2 div, .box_3 div, .box_4 div, .box_5 div, .box_6 div, .box_7 div, .box_8 div, .box_style article, .box_1 article, .box_2 article, .box_3 article, .box_4 article, .box_5 article, .box_6 article, .box_7 article, .box_8 article, .box_style ul, .box_1 ul, .box_2 ul, .box_3 ul, .box_4 ul, .box_5 ul, .box_6 ul, .box_7 ul, .box_8 ul { overflow: hidden; position: relative; }
+
+.box_1 { height: 150px; }
+
+.box_2 { height: 305px; }
+
+.box_3 { height: 460px; }
+
+.box_4 { height: 615px; }
+
+.box_5 { height: 770px; }
+
+.box_6 { height: 925px; }
+
+.box_7 { height: 1080px; }
+
+.box_8 { height: 1235px; }

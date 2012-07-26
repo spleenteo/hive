@@ -3,14 +3,31 @@
  ** http://www.cantierecreativo.net
  **/
 
-// YOU CAN CHANGE SOME SETTINGS IF YOU WISH
-$width:         100%;     // % value actually
-$responsive:    1;        // will your layout respond to devices and browsers resize? default true
-$cinemaEnabled: 0;        // if true it set up the cinema display @media
-$cinemaWidth:   0;        // and hive will be at this size (usually 85/90% just to leave some margin)
-$cinemaSize:    1500px;   // it only works with sass --pre
+// HIVE USER CONFIG
+$width:             100%;       // except for desktop size the rest of hives will be this percentage (just %)
+$responsive:        1;          // can be 1 or 0. Will your layout respond to devices and browsers sizes?
+                                // if 0 the $sizeDesktop will b the default size
+$defaultSiteSize:   960px;      // the size in px for desktop or non responsive website
+$cinemaEnabled:     0;          // is your design ready for cinema display @media
+
+// set your sizes for mediaqueries breakes
+$sizeSmartphonePortrait:    320px; // the minimum size
+$sizeSmartphoneLanscape:    700px;
+$sizeTabletPortrait:        720px;
+$sizeDesktop:               $defaultSiteSize;
+$sizeCinema:                1500px;
+$cinemaWidth:               90%; // and hive will be at this size (usually 85/90% just to leave some margin)
+
+// configurations for boxes
+// if you need some div with the same height
+$box_unit_height:   150px;      // boxes height is a multiple of a unit. .box_3 means 1x3 units
+$max_boxes:         8;          // the maximum units available for a box
+$box_margin:        5px;        // distance between boxes and cells
+
+
 
 // private from here
+// DON'T CHANGE ANYTHING HERE BELOW!
 $unit: $width / 10;
 
 @mixin clearfix(){
@@ -18,7 +35,6 @@ $unit: $width / 10;
     &:after {
         clear: both;
         content: ' ';
-        display: block;
         font-size: 0;
         line-height: 0;
         visibility: hidden;
@@ -27,31 +43,12 @@ $unit: $width / 10;
     }
 }
 
-// SMALLER THAN TABLET LANDSCAPE
-@media only screen and (max-width: 700px){
-    .hive{
-        @for $i from 1 through 10 {
-          .pre_#{$i * 10} { padding-left: 0; }
-          .post_#{$i * 10} { padding-right: 0; }
-        }
-        .post_25, .pre_25,
-        .post_33, .pre_33,
-        .post_66, .pre_66,
-        .post_75, .pre_75{
-            padding: 0 !important;
-        }
-
-    }
-
-}
-// smaller then 1499 (SMALLER THAN CINEMA DISPLAY)
-// it means almost all modern browser excepts those whom dont't undersand media queries
-@media only screen and (max-width: 5000px){
+@if $responsive == 0 {
     .hive{
         @include clearfix();
-        width: $width;
-        margin-left: (100% - $width)/2;
-        margin-right: (100% - $width)/2;
+        width: $sizeDesktop;
+        max-width: $sizeDesktop;
+        margin: auto;
         .cell_10, .cell_20,
         .cell_25, .cell_30,
         .cell_33, .cell_40,
@@ -63,7 +60,6 @@ $unit: $width / 10;
             float: left;
             position: relative;
         }
-
         @for $i from 1 through 10 {
             .cell_#{$i * 10} { width: $unit * $i; }
             .pre_#{$i * 10} { padding-left: $unit * $i; }
@@ -85,54 +81,130 @@ $unit: $width / 10;
         .post_75{ padding-right: ($width / 4) * 3; }
     }
 }
-
-// SMARTPHONE PORTRAIT
-@media only screen and (max-width: 320px){
-    .hive{
-        @for $i from 1 through 10 {
-            .cell_#{$i * 10} { width: 100% ;}
+@else{
+    // SMALLER THAN TABLET LANDSCAPE
+    @media only screen and (max-width: $sizeSmartphoneLanscape - 20px){
+        .hive{
+            @for $i from 1 through 10 {
+              .pre_#{$i * 10} { padding-left: 0; }
+              .post_#{$i * 10} { padding-right: 0; }
+            }
+            .post_25, .pre_25,
+            .post_33, .pre_33,
+            .post_66, .pre_66,
+            .post_75, .pre_75{
+                padding: 0 !important;
+            }
         }
-        .cell_25,
-        .cell_33,
-        .cell_66,
-        .cell_75{ width: 100%; }
     }
-}
+    // smaller then CINEMA DISPLAY
+    // it means almost all modern browser excepts those whom dont't undersand media queries
+    @media only screen and (max-width: 5000px){
+        .hive{
+            @include clearfix();
+            width: $width;
+            margin-left: (100% - $width)/2;
+            margin-right: (100% - $width)/2;
+            .cell_10, .cell_20,
+            .cell_25, .cell_30,
+            .cell_33, .cell_40,
+            .cell_50, .cell_60,
+            .cell_66, .cell_70,
+            .cell_75, .cell_80,
+            .cell_90, .cell_100{
+                display: inline;
+                float: left;
+                position: relative;
+            }
 
-// TABLET PORTRAIL ONLY
-@media only screen and (max-width: 720px) and (min-width: 321px){
-    .hive{
-        @for $i from 1 through 9 {
-            .cell_#{$i * 10} {
-                width: 50%;
-                &.hived{
-                    width: 100%;
+            @for $i from 1 through 10 {
+                .cell_#{$i * 10} { width: $unit * $i; }
+                .pre_#{$i * 10} { padding-left: $unit * $i; }
+                .post_#{$i * 10} { padding-right: $unit * $i; }
+            }
+            .cell_25{ width: $width / 4; }
+            .cell_33{ width: $width / 3; }
+            .cell_66{ width: ($width / 3) * 2; }
+            .cell_75{ width: ($width / 4) * 3; }
+
+            .pre_25{ padding-left: $width / 4; }
+            .pre_33{ padding-left: $width / 3; }
+            .pre_66{ padding-left: ($width / 3) * 2; }
+            .pre_75{ padding-left: ($width / 4) * 3; }
+
+            .post_25{ padding-right: $width / 4; }
+            .post_33{ padding-right: $width / 3; }
+            .post_66{ padding-right: ($width / 3) * 2; }
+            .post_75{ padding-right: ($width / 4) * 3; }
+        }
+    }
+
+    // SMARTPHONE PORTRAIT
+    @media only screen and (max-width: $sizeSmartphonePortrait){
+        .hive{
+            @for $i from 1 through 10 {
+                .cell_#{$i * 10} { width: 100% ;}
+            }
+            .cell_25,
+            .cell_33,
+            .cell_66,
+            .cell_75{
+                width: 100%;
+            }
+        }
+    }
+
+    // TABLET PORTRAIL ONLY
+    @media only screen and (max-width: $sizeSmartphonePortrait) and (min-width: $sizeSmartphoneLanscape + 1){
+        .hive{
+            @for $i from 1 through 9 {
+                .cell_#{$i * 10} {
+                    width: 50%;
+                    &.hived{
+                        width: 100%;
+                    }
                 }
+            }
+        }
+    }
+
+    // TABLET LANSDSCAPE or DESKTOP ONLY
+    @media only screen and (min-width: $sizeDesktop) and (max-width: $sizeCinema - 1px){
+        .hive{
+            max-width: $sizeDesktop;
+            margin: auto;
+        }
+    }
+
+    // CINEMA DISPLAY OR WEB TV
+    @media only screen and (min-width: $sizeCinema ) {
+        @if $cinemaEnabled == 1{
+            .hive{
+                max-width: $cinemaWidth;
+                margin: auto;
+            }
+        }
+        @else{
+            .hive{
+                max-width: $sizeDesktop;
+                margin: auto;
             }
         }
     }
 }
 
-// TABLET LANSDSCAPE or DESKTOP ONLY
-@media only screen and (min-width: 1024px) and (max-width: 1499px){
-    .hive{
-        max-width: 960px;
-        margin: auto;
+// the box system: if you need same height areas
+.box_style{
+    margin: $box_margin 0 0 $box_margin;
+    >section, div, article, ul{
+        overflow: hidden;
+        position: relative;
+    }
+}
+@for $i from 1 through $max_boxes {
+    .box_#{$i} {
+        @extend .box_style;
+        height: ($box_unit_height * $i) + ($box_margin * ($i - 1));
     }
 }
 
-// CINEMA DISPLAY OR WEB TV
-@media only screen and (min-width: $cinemaSize ) {
-    @if $cinemaEnabled == 1 and $cinemaWidth != 0{
-        .hive{
-            max-width: $cinemaWidth;
-            margin: auto;
-        }
-    }
-    @else{
-        .hive{
-            max-width: 960px;
-            margin: auto;
-        }
-    }
-}
