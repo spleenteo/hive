@@ -1,90 +1,98 @@
-/*
-Syntax error: Invalid CSS after ".pre_#": expected id name, was "$i * 10"
-        on line 32 of ./hive.sass
-
-27: 
-28: // SMALLER THAN TABLET LANDSCAPE
-29: @media only screen and (max-width: 700px)
-30:   .hive
-31:     @for $i from 1 through 10
-32:       .pre_#$i * 10
-33:         padding-left: 0
-34:       .post_#$i * 10
-35:         padding-right: 0
-36: 
-37:     .post_25, .pre_25,.post_33, .pre_33,.post_66, .pre_66,.post_75, .pre_75
-
-Backtrace:
-./hive.sass:32
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/scss/parser.rb:1085:in `expected'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/scss/parser.rb:1021:in `expected'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/scss/parser.rb:1003:in `expr!'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/scss/parser.rb:681:in `id_selector'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/scss/parser.rb:642:in `simple_selector_sequence'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/scss/parser.rb:617:in `_selector'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/scss/parser.rb:601:in `selector_comma_sequence'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/scss/parser.rb:1002:in `expr!'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/scss/static_parser.rb:20:in `parse_selector'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/perform.rb:253:in `visit_rule'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/perform.rb:20:in `visit'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/perform.rb:109:in `block (3 levels) in visit_for'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/perform.rb:109:in `map'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/perform.rb:109:in `block (2 levels) in visit_for'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/perform.rb:106:in `each'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/perform.rb:106:in `map'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/perform.rb:106:in `block in visit_for'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/perform.rb:41:in `with_environment'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/perform.rb:105:in `visit_for'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/perform.rb:20:in `visit'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/base.rb:53:in `map'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/perform.rb:29:in `block in visit_children'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/perform.rb:41:in `with_environment'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/perform.rb:28:in `visit_children'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/perform.rb:259:in `visit_rule'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/perform.rb:20:in `visit'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/base.rb:53:in `map'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/perform.rb:29:in `block in visit_children'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/perform.rb:41:in `with_environment'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/perform.rb:28:in `visit_children'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/perform.rb:303:in `visit_media'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/perform.rb:20:in `visit'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/base.rb:53:in `map'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/perform.rb:29:in `block in visit_children'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/perform.rb:41:in `with_environment'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/perform.rb:28:in `visit_children'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/perform.rb:49:in `visit_root'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/perform.rb:20:in `visit'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/visitors/perform.rb:7:in `visit'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/tree/root_node.rb:20:in `render'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/engine.rb:309:in `_render'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/engine.rb:256:in `render'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/plugin/compiler.rb:340:in `update_stylesheet'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/plugin/compiler.rb:202:in `block in update_stylesheets'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/plugin/compiler.rb:200:in `each'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/plugin/compiler.rb:200:in `update_stylesheets'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/lib/sass/plugin/compiler.rb:298:in `block in watch'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/vendor/listen/lib/listen/multi_listener.rb:86:in `call'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/vendor/listen/lib/listen/multi_listener.rb:86:in `on_change'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/vendor/listen/lib/listen/multi_listener.rb:95:in `block in initialize_adapter'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/vendor/listen/lib/listen/adapters/polling.rb:55:in `call'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/vendor/listen/lib/listen/adapters/polling.rb:55:in `poll'
-/Users/matteo/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.2.0.alpha.244/vendor/listen/lib/listen/adapters/polling.rb:31:in `block in start'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Invalid CSS after \".pre_#\": expected id name, was \"$i * 10\"\A         on line 32 of ./hive.sass\A \A 27: \A 28: // SMALLER THAN TABLET LANDSCAPE\A 29: @media only screen and (max-width: 700px)\A 30:   .hive\A 31:     @for $i from 1 through 10\A 32:       .pre_#$i * 10\A 33:         padding-left: 0\A 34:       .post_#$i * 10\A 35:         padding-right: 0\A 36: \A 37:     .post_25, .pre_25,.post_33, .pre_33,.post_66, .pre_66,.post_75, .pre_75"; }
+/** HIVE SCSS YET ANOTHER RESPONSIVE GRID SYSTEM * Author Matteo Papadopoulos aka @spleenteo on twitter * http://www.cantierecreativo.net */
+@media only screen and (max-width: 700px) { .hive .pre_10 { padding-left: 0; }
+  .hive .post_10 { padding-right: 0; }
+  .hive .pre_20 { padding-left: 0; }
+  .hive .post_20 { padding-right: 0; }
+  .hive .pre_30 { padding-left: 0; }
+  .hive .post_30 { padding-right: 0; }
+  .hive .pre_40 { padding-left: 0; }
+  .hive .post_40 { padding-right: 0; }
+  .hive .pre_50 { padding-left: 0; }
+  .hive .post_50 { padding-right: 0; }
+  .hive .pre_60 { padding-left: 0; }
+  .hive .post_60 { padding-right: 0; }
+  .hive .pre_70 { padding-left: 0; }
+  .hive .post_70 { padding-right: 0; }
+  .hive .pre_80 { padding-left: 0; }
+  .hive .post_80 { padding-right: 0; }
+  .hive .pre_90 { padding-left: 0; }
+  .hive .post_90 { padding-right: 0; }
+  .hive .pre_100 { padding-left: 0; }
+  .hive .post_100 { padding-right: 0; }
+  .hive .post_25, .hive .pre_25, .hive .post_33, .hive .pre_33, .hive .post_66, .hive .pre_66, .hive .post_75, .hive .pre_75 { padding: 0 !important; } }
+@media only screen and (max-width: 5000px) { .hive { display: block; width: 100%; margin-left: 0%; margin-right: 0%; }
+  .hive:after { clear: both; content: ' '; display: block; font-size: 0; line-height: 0; visibility: hidden; width: 0; height: 0; }
+  .hive .cell_10, .hive .cell_20, .hive .cell_25, .hive .cell_30, .hive .cell_33, .hive .cell_40, .hive .cell_50, .hive .cell_60, .hive .cell_66, .hive .cell_70, .hive .cell_75, .hive .cell_80, .hive .cell_90, .hive .cell_100 { display: inline; float: left; position: relative; }
+  .hive .cell_10 { width: 10%; }
+  .hive .pre_10 { padding-left: 10%; }
+  .hive .post_10 { padding-right: 10%; }
+  .hive .cell_20 { width: 20%; }
+  .hive .pre_20 { padding-left: 20%; }
+  .hive .post_20 { padding-right: 20%; }
+  .hive .cell_30 { width: 30%; }
+  .hive .pre_30 { padding-left: 30%; }
+  .hive .post_30 { padding-right: 30%; }
+  .hive .cell_40 { width: 40%; }
+  .hive .pre_40 { padding-left: 40%; }
+  .hive .post_40 { padding-right: 40%; }
+  .hive .cell_50 { width: 50%; }
+  .hive .pre_50 { padding-left: 50%; }
+  .hive .post_50 { padding-right: 50%; }
+  .hive .cell_60 { width: 60%; }
+  .hive .pre_60 { padding-left: 60%; }
+  .hive .post_60 { padding-right: 60%; }
+  .hive .cell_70 { width: 70%; }
+  .hive .pre_70 { padding-left: 70%; }
+  .hive .post_70 { padding-right: 70%; }
+  .hive .cell_80 { width: 80%; }
+  .hive .pre_80 { padding-left: 80%; }
+  .hive .post_80 { padding-right: 80%; }
+  .hive .cell_90 { width: 90%; }
+  .hive .pre_90 { padding-left: 90%; }
+  .hive .post_90 { padding-right: 90%; }
+  .hive .cell_100 { width: 100%; }
+  .hive .pre_100 { padding-left: 100%; }
+  .hive .post_100 { padding-right: 100%; }
+  .hive .cell_25 { width: 25%; }
+  .hive .cell_33 { width: 33.333%; }
+  .hive .cell_66 { width: 66.667%; }
+  .hive .cell_75 { width: 75%; }
+  .hive .pre_25 { padding-left: 25%; }
+  .hive .pre_33 { padding-left: 33.333%; }
+  .hive .pre_66 { padding-left: 66.667%; }
+  .hive .pre_75 { padding-left: 75%; }
+  .hive .post_25 { padding-right: 25%; }
+  .hive .post_33 { padding-right: 33.333%; }
+  .hive .post_66 { padding-right: 66.667%; }
+  .hive .post_75 { padding-right: 75%; } }
+@media only screen and (max-width: 320px) { .hive .cell_10 { width: 100%; }
+  .hive .cell_20 { width: 100%; }
+  .hive .cell_30 { width: 100%; }
+  .hive .cell_40 { width: 100%; }
+  .hive .cell_50 { width: 100%; }
+  .hive .cell_60 { width: 100%; }
+  .hive .cell_70 { width: 100%; }
+  .hive .cell_80 { width: 100%; }
+  .hive .cell_90 { width: 100%; }
+  .hive .cell_100 { width: 100%; }
+  .hive .cell_25, .hive .cell_33, .hive .cell_66, .hive .cell_75 { width: 100%; } }
+@media only screen and (max-width: 720px) and (min-width: 321px) { .hive .cell_10 { width: 50%; }
+  .hive .cell_10.hived { width: 100%; }
+  .hive .cell_20 { width: 50%; }
+  .hive .cell_20.hived { width: 100%; }
+  .hive .cell_30 { width: 50%; }
+  .hive .cell_30.hived { width: 100%; }
+  .hive .cell_40 { width: 50%; }
+  .hive .cell_40.hived { width: 100%; }
+  .hive .cell_50 { width: 50%; }
+  .hive .cell_50.hived { width: 100%; }
+  .hive .cell_60 { width: 50%; }
+  .hive .cell_60.hived { width: 100%; }
+  .hive .cell_70 { width: 50%; }
+  .hive .cell_70.hived { width: 100%; }
+  .hive .cell_80 { width: 50%; }
+  .hive .cell_80.hived { width: 100%; }
+  .hive .cell_90 { width: 50%; }
+  .hive .cell_90.hived { width: 100%; } }
+@media only screen and (min-width: 1024px) and (max-width: 1499px) { .hive { max-width: 960px; margin: auto; } }
+@media only screen and (min-width: 1500px) { .hive { max-width: 960px; margin: auto; } }

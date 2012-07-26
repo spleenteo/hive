@@ -1,6 +1,6 @@
 /** HIVE SCSS YET ANOTHER RESPONSIVE GRID SYSTEM
  ** Author Matteo Papadopoulos aka @spleenteo on twitter
- ** http://www.cantierecreativo.net 
+ ** http://www.cantierecreativo.net
  **/
 
 // YOU CAN CHANGE SOME SETTINGS IF YOU WISH
@@ -9,7 +9,6 @@ $responsive:    1;        // will your layout respond to devices and browsers re
 $cinemaEnabled: 0;        // if true it set up the cinema display @media
 $cinemaWidth:   0;        // and hive will be at this size (usually 85/90% just to leave some margin)
 $cinemaSize:    1500px;   // it only works with sass --pre
-
 
 // private from here
 $unit: $width / 10;
@@ -109,7 +108,6 @@ $unit: $width / 10;
                 &.hived{
                     width: 100%;
                 }
-
             }
         }
     }
