@@ -96,21 +96,18 @@
   .hive .cell_90.hived { width: 100%; } }
 @media only screen and (min-width: 960px) and (max-width: 1499px) { .hive { max-width: 960px; margin: auto; } }
 @media only screen and (min-width: 1500px) { .hive { max-width: 960px; margin: auto; } }
-.box_style, .box_1, .box_2, .box_3, .box_4, .box_5, .box_6, .box_7, .box_8 { margin: 5px 0 0 5px; }
-.box_style > section, .box_1 > section, .box_2 > section, .box_3 > section, .box_4 > section, .box_5 > section, .box_6 > section, .box_7 > section, .box_8 > section, .box_style div, .box_1 div, .box_2 div, .box_3 div, .box_4 div, .box_5 div, .box_6 div, .box_7 div, .box_8 div, .box_style article, .box_1 article, .box_2 article, .box_3 article, .box_4 article, .box_5 article, .box_6 article, .box_7 article, .box_8 article, .box_style ul, .box_1 ul, .box_2 ul, .box_3 ul, .box_4 ul, .box_5 ul, .box_6 ul, .box_7 ul, .box_8 ul { overflow: hidden; position: relative; }
+.box_1 { margin: 5px 0 0 5px; height: 150px; overflow: hidden; overflow-y: auto; position: relative; }
 
-.box_1 { height: 150px; }
+.box_2 { margin: 5px 0 0 5px; height: 305px; overflow: hidden; overflow-y: auto; position: relative; }
 
-.box_2 { height: 305px; }
+.box_3 { margin: 5px 0 0 5px; height: 460px; overflow: hidden; overflow-y: auto; position: relative; }
 
-.box_3 { height: 460px; }
+.box_4 { margin: 5px 0 0 5px; height: 615px; overflow: hidden; overflow-y: auto; position: relative; }
 
-.box_4 { height: 615px; }
+.box_5 { margin: 5px 0 0 5px; height: 770px; overflow: hidden; overflow-y: auto; position: relative; }
 
-.box_5 { height: 770px; }
+.box_6 { margin: 5px 0 0 5px; height: 925px; overflow: hidden; overflow-y: auto; position: relative; }
 
-.box_6 { height: 925px; }
+.box_7 { margin: 5px 0 0 5px; height: 1080px; overflow: hidden; overflow-y: auto; position: relative; }
 
-.box_7 { height: 1080px; }
-
-.box_8 { height: 1235px; }
+.box_8 { margin: 5px 0 0 5px; height: 1235px; overflow: hidden; overflow-y: auto; position: relative; }

@@ -193,17 +193,13 @@ $unit: $width / 10;
 }
 
 // the box system: if you need same height areas
-.box_style{
-    margin: $box_margin 0 0 $box_margin;
-    >section, div, article, ul{
-        overflow: hidden;
-        position: relative;
-    }
-}
 @for $i from 1 through $max_boxes {
     .box_#{$i} {
-        @extend .box_style;
+        margin: $box_margin 0 0 $box_margin;
         height: ($box_unit_height * $i) + ($box_margin * ($i - 1));
+        overflow: hidden;
+        overflow-y: auto;
+        position: relative;
     }
 }
 
