@@ -1,9 +1,12 @@
 body { font-family: Arial; font-size: 1em; background-image: url("bg.jpg"); color: #000; padding-top: 30px; margin: 0; }
 body:after { display: block; position: absolute; top: 0; height: 20px; background-color: rgba(50, 50, 50, 0.6); width: 100%; line-height: 20px; color: #fff; font-size: 11px; text-align: center; }
 
+.box_1, .box_2, .box_3, .box_4, .box_5, .box_6, .box_7, .box_8 { background-color: rgba(255, 255, 255, 0.7); }
+.box_1 > section, .box_2 > section, .box_3 > section, .box_4 > section, .box_5 > section, .box_6 > section, .box_7 > section, .box_8 > section { padding: 10px; }
+
 pre { background: #000; color: #fff; padding: 15px; }
 
-.downlaod { background-color: rgba(255, 255, 255, 0.7); }
+.intro { font-size: 0.8em; }
 
 .the_demo_grid section { display: block; border: 1px solid #ccc; min-height: 30px; font-family: Arial; font-size: 10px; line-height: 30px; text-align: center; margin-bottom: 10px; background-color: rgba(255, 255, 255, 0.75); -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
 

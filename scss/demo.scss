@@ -19,12 +19,20 @@ body{
         text-align: center;
     }
 }
+.box_1, .box_2, .box_3, .box_4, .box_5, .box_6, .box_7, .box_8{
+    background-color: rgba(#fff, 0.7);
+    >section{
+        padding: 10px;
+    }
+}
+
 
 pre { background: #000; color: #fff; padding: 15px;}
 
-.downlaod{
-    background-color: rgba(#fff, 0.7);
+.intro{
+    font-size: 0.8em;
 }
+
 .the_demo_grid{
     section{
         display: block;
