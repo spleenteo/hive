@@ -4,18 +4,18 @@
 
 Just another grid system to build responsive layout! Yes, another one! :)
 
-The grids has been changed to use the metaphor of hives and cells.
-Bees are able to build a hive as a pattern based either on their number and on the stage they are going to do it.
-Using just one markup you can have a responsive (mobile-ready) fluid layout (with a preferred % width). If you don't want to be responsive you can cong hive to be fixed.
+The grids has been changed to use the metaphor of Hives and cells.
+Bees are able to build a Hive as a pattern based either on their number and on the stage they are going to do it.
+Using just one markup you can have a responsive (mobile-ready) fluid layout (with a preferred % width). If you don't want to be responsive you can cong Hive to be fixed.
 
 This library is written in SCSS but the repo includes a ready to use CSS file.
 
 ## The new release 2.0
 
-The first version of hive was based on 12 or 16 columns as it was inspired by 960grid. You could choose your width, in percentage or fixed pixel than build your layout thinking in 12 or 16. So, to make a column the half of the hive, a .cell_6 was supposed to be used.
+The first version of Hive was based on 12 or 16 columns as it was inspired by 960grid. You could choose your width, in percentage or fixed pixel than build your layout thinking in 12 or 16. So, to make a column the half of the Hive, a .cell_6 was supposed to be used.
 
 Now everything is changed! We want to be responsive so we could think in percentage instead of columns or portion (like .one_half classes I saw around).
-Thats why now hive is basically 100% width and can be splitted in 10 columns 10% each. There are few additional sizes, like 25% 33% 66% 75% that make us able to build 3 and 4 columns layouts.
+Thats why now Hive is basically 100% width and can be splitted in 10 columns 10% each. There are few additional sizes, like 25% 33% 66% 75% that make us able to build 3 and 4 columns layouts.
 Cells can be nested and nested again. A cell_50 will be the 50% of it's container.
 
 ## Features
@@ -31,7 +31,7 @@ Cells can be nested and nested again. A cell_50 will be the 50% of it's containe
 
 Hive is written in SCSS, so you need a [Sass](http://sass-lang.com/) interpreter to export the final CSS file.
 
-* since hive use variables to define some @media queries, you must use at least this version of sass gem to modify and compile hive
+Since Hive use variables to define some @media queries, you must use at least this version of sass gem to modify and compile Hive
 
  Sass 3.2.0.alpha.244
 
@@ -43,17 +43,14 @@ I use the [Haml](http://haml-lang.com/) ruby gem as a Sass interpreter. This is 
 
 ## Classes
 
-* .hive for containers
+* .Hive for containers
 * .cell_[from 10 to 100] for columns (steps by 10)
 * box_[from 1 to 8] - the number is the unit of height. by default 1 unit is 150px, 2 units is 305px (unit * 2 + 5px margin) and so on.
 
 ## Warning!!!
 
-* cell_* and box_* are just containers. Don't use style for them that could change their size as pagging, margin etc.
-* always use a section or a dive as first element insie a .cell_* or .box_* - give it a classname and style it from there.
-
-
-
+* _cell_ and _box_ are just containers. Don't use additional classes or styles that could change their size like paddings, margins etc.
+* always use a section or a div as first element insie a _cell_ or _box_ - give it a classname and style it from there.
 
 
 ###Example
