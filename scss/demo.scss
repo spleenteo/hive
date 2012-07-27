@@ -1,6 +1,6 @@
 body{
     font-family: Arial;
-    font-size: 0.8em;
+    font-size: 1em;
     background-image: url("bg.jpg");
     color: #000;
     padding-top: 30px;
@@ -65,7 +65,7 @@ pre { background: #000; color: #fff; padding: 15px;}
             border: 1px solid blue;
             margin: 0;
             padding: 2px;
-            
+
             li{
                 >div{
                     border: 1px solid olive;
@@ -91,7 +91,7 @@ pre { background: #000; color: #fff; padding: 15px;}
         border: 1px solid blue;
         margin: 0;
         padding: 2px;
-        
+
         li{
             >div{
                 border: 1px solid olive;
@@ -99,7 +99,7 @@ pre { background: #000; color: #fff; padding: 15px;}
             }
         }
     }
-    
+
 }
 h1, h2, p{
     padding: 4px;
@@ -130,7 +130,7 @@ footer{
         font-size: 2em;
         margin: 3px;
     }
-    
+
 }
 @media only screen and (max-width: 480px){
     body{

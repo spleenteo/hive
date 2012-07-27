@@ -1,4 +1,4 @@
-body { font-family: Arial; font-size: 0.8em; background-image: url("bg.jpg"); color: #000; padding-top: 30px; margin: 0; }
+body { font-family: Arial; font-size: 1em; background-image: url("bg.jpg"); color: #000; padding-top: 30px; margin: 0; }
 body:after { display: block; position: absolute; top: 0; height: 20px; background-color: rgba(50, 50, 50, 0.6); width: 100%; line-height: 20px; color: #fff; font-size: 11px; text-align: center; }
 
 pre { background: #000; color: #fff; padding: 15px; }
