@@ -20,8 +20,8 @@
   .hive .pre_100 { padding-left: 0; }
   .hive .post_100 { padding-right: 0; }
   .hive .post_25, .hive .pre_25, .hive .post_33, .hive .pre_33, .hive .post_66, .hive .pre_66, .hive .post_75, .hive .pre_75 { padding: 0 !important; } }
-@media only screen and (max-width: 5000px) { .hive { display: block; width: 100%; margin-left: 0%; margin-right: 0%; }
-  .hive:after { clear: both; content: ' '; font-size: 0; line-height: 0; visibility: hidden; width: 0; height: 0; }
+@media only screen and (max-width: 5000px) { .hive { display: block; height: 1%; width: 100%; margin-left: 0%; margin-right: 0%; }
+  .hive:after { clear: both; content: ' '; display: block; font-size: 0; line-height: 0; visibility: hidden; width: 0; height: 0; }
   .hive .cell_10, .hive .cell_20, .hive .cell_25, .hive .cell_30, .hive .cell_33, .hive .cell_40, .hive .cell_50, .hive .cell_60, .hive .cell_66, .hive .cell_70, .hive .cell_75, .hive .cell_80, .hive .cell_90, .hive .cell_100 { display: inline; float: left; position: relative; }
   .hive .cell_10 { width: 10%; }
   .hive .pre_10 { padding-left: 10%; }
@@ -54,16 +54,16 @@
   .hive .pre_100 { padding-left: 100%; }
   .hive .post_100 { padding-right: 100%; }
   .hive .cell_25 { width: 25%; }
-  .hive .cell_33 { width: 33.333%; }
-  .hive .cell_66 { width: 66.667%; }
+  .hive .cell_33 { width: 33.33333%; }
+  .hive .cell_66 { width: 66.66667%; }
   .hive .cell_75 { width: 75%; }
   .hive .pre_25 { padding-left: 25%; }
-  .hive .pre_33 { padding-left: 33.333%; }
-  .hive .pre_66 { padding-left: 66.667%; }
+  .hive .pre_33 { padding-left: 33.33333%; }
+  .hive .pre_66 { padding-left: 66.66667%; }
   .hive .pre_75 { padding-left: 75%; }
   .hive .post_25 { padding-right: 25%; }
-  .hive .post_33 { padding-right: 33.333%; }
-  .hive .post_66 { padding-right: 66.667%; }
+  .hive .post_33 { padding-right: 33.33333%; }
+  .hive .post_66 { padding-right: 66.66667%; }
   .hive .post_75 { padding-right: 75%; } }
 @media only screen and (max-width: 320px) { .hive .cell_10 { width: 100%; }
   .hive .cell_20 { width: 100%; }
@@ -111,3 +111,7 @@
 .box_7 { margin: 5px 0 0 5px; height: 1080px; overflow: hidden; overflow-y: auto; position: relative; }
 
 .box_8 { margin: 5px 0 0 5px; height: 1235px; overflow: hidden; overflow-y: auto; position: relative; }
+
+.box_9 { margin: 5px 0 0 5px; height: 1390px; overflow: hidden; overflow-y: auto; position: relative; }
+
+.box_10 { margin: 5px 0 0 5px; height: 1545px; overflow: hidden; overflow-y: auto; position: relative; }
