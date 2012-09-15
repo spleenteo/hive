@@ -1,0 +1,187 @@
+@import "hive_config";
+
+/** HIVE SCSS YET ANOTHER RESPONSIVE GRID SYSTEM
+ ** Author Matteo Papadopoulos aka @spleenteo on twitter
+ ** http://www.cantierecreativo.net
+ **/
+
+// private from here
+// DON'T CHANGE ANYTHING HERE BELOW!
+$unit: $width / 10;
+
+@mixin clearfix(){
+    display: block;
+    height: 1%;
+    &:after {
+        clear: both;
+        content: ' ';
+        display: block;
+        font-size: 0;
+        line-height: 0;
+        visibility: hidden;
+        width: 0;
+        height: 0
+    }
+}
+
+@if $responsive == 0 {
+    .hive{
+        @include clearfix();
+        width: $sizeDesktop;
+        max-width: $sizeDesktop;
+        margin: auto;
+        .cell_10, .cell_20,
+        .cell_25, .cell_30,
+        .cell_33, .cell_40,
+        .cell_50, .cell_60,
+        .cell_66, .cell_70,
+        .cell_75, .cell_80,
+        .cell_90, .cell_100{
+            display: inline;
+            float: left;
+            position: relative;
+        }
+        @for $i from 1 through 10 {
+            .cell_#{$i * 10} { width: $unit * $i; }
+            .pre_#{$i * 10} { padding-left: $unit * $i; }
+            .post_#{$i * 10} { padding-right: $unit * $i; }
+        }
+        .cell_25{ width: $width / 4; }
+        .cell_33{ width: $width / 3; }
+        .cell_66{ width: ($width / 3) * 2; }
+        .cell_75{ width: ($width / 4) * 3; }
+
+        .pre_25{ padding-left: $width / 4; }
+        .pre_33{ padding-left: $width / 3; }
+        .pre_66{ padding-left: ($width / 3) * 2; }
+        .pre_75{ padding-left: ($width / 4) * 3; }
+
+        .post_25{ padding-right: $width / 4; }
+        .post_33{ padding-right: $width / 3; }
+        .post_66{ padding-right: ($width / 3) * 2; }
+        .post_75{ padding-right: ($width / 4) * 3; }
+    }
+}
+@else{
+    // SMALLER THAN TABLET LANDSCAPE
+    @media only screen and (max-width: $sizeSmartphoneLanscape - 20px){
+        .hive{
+            @for $i from 1 through 10 {
+              .pre_#{$i * 10} { padding-left: 0; }
+              .post_#{$i * 10} { padding-right: 0; }
+            }
+            .post_25, .pre_25,
+            .post_33, .pre_33,
+            .post_66, .pre_66,
+            .post_75, .pre_75{
+                padding: 0 !important;
+            }
+        }
+    }
+    // smaller then CINEMA DISPLAY
+    // it means almost all modern browser excepts those whom dont't undersand media queries
+    @media only screen and (max-width: 5000px){
+        .hive{
+            @include clearfix();
+            width: $width;
+            margin-left: (100% - $width)/2;
+            margin-right: (100% - $width)/2;
+            .cell_10, .cell_20,
+            .cell_25, .cell_30,
+            .cell_33, .cell_40,
+            .cell_50, .cell_60,
+            .cell_66, .cell_70,
+            .cell_75, .cell_80,
+            .cell_90, .cell_100{
+                display: inline;
+                float: left;
+                position: relative;
+            }
+
+            @for $i from 1 through 10 {
+                .cell_#{$i * 10} { width: $unit * $i; }
+                .pre_#{$i * 10} { padding-left: $unit * $i; }
+                .post_#{$i * 10} { padding-right: $unit * $i; }
+            }
+            .cell_25{ width: $width / 4; }
+            .cell_33{ width: $width / 3; }
+            .cell_66{ width: ($width / 3) * 2; }
+            .cell_75{ width: ($width / 4) * 3; }
+
+            .pre_25{ padding-left: $width / 4; }
+            .pre_33{ padding-left: $width / 3; }
+            .pre_66{ padding-left: ($width / 3) * 2; }
+            .pre_75{ padding-left: ($width / 4) * 3; }
+
+            .post_25{ padding-right: $width / 4; }
+            .post_33{ padding-right: $width / 3; }
+            .post_66{ padding-right: ($width / 3) * 2; }
+            .post_75{ padding-right: ($width / 4) * 3; }
+        }
+    }
+
+    // SMARTPHONE PORTRAIT
+    @media only screen and (max-width: $sizeSmartphonePortrait){
+        .hive{
+            @for $i from 1 through 10 {
+                .cell_#{$i * 10} { width: 100% ;}
+            }
+            .cell_25,
+            .cell_33,
+            .cell_66,
+            .cell_75{
+                width: 100%;
+            }
+        }
+    }
+
+    // TABLET PORTRAIL ONLY
+    @media only screen and (max-width: $sizeSmartphonePortrait) and (min-width: $sizeSmartphoneLanscape + 1){
+        .hive{
+            @for $i from 1 through 9 {
+                .cell_#{$i * 10} {
+                    width: 50%;
+                    &.hived{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    // TABLET LANSDSCAPE or DESKTOP ONLY
+    @media only screen and (min-width: $sizeDesktop) and (max-width: $sizeCinema - 1px){
+        .hive{
+            max-width: $sizeDesktop;
+            margin: auto;
+        }
+    }
+
+    // CINEMA DISPLAY OR WEB TV
+    @media only screen and (min-width: $sizeCinema ) {
+        @if $cinemaEnabled == 1{
+            .hive{
+                max-width: $cinemaWidth;
+                margin: auto;
+            }
+        }
+        @else{
+            .hive{
+                max-width: $sizeDesktop;
+                margin: auto;
+            }
+        }
+    }
+}
+
+// the box system: if you need same height areas
+@for $i from 1 through $max_boxes {
+    .box_#{$i} {
+        margin: $box_margin 0 0 $box_margin;
+        height: ($box_unit_height * $i) + ($box_margin * ($i - 1));
+        overflow: hidden;
+        overflow-y: auto;
+        position: relative;
+    }
+}
+

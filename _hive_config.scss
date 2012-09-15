@@ -1,0 +1,20 @@
+// HIVE USER CONFIG
+$width:             100%;       // except for desktop size the rest of hives will be this percentage (just %)
+$responsive:        1;          // can be 1 or 0. Will your layout respond to devices and browsers sizes?
+                                // if 0 the $sizeDesktop will b the default size
+$defaultSiteSize:   960px;      // the size in px for desktop or non responsive website
+$cinemaEnabled:     0;          // is your design ready for cinema display @media
+
+// set your sizes for mediaqueries breakes
+$sizeSmartphonePortrait:    320px; // the minimum size
+$sizeSmartphoneLanscape:    700px;
+$sizeTabletPortrait:        720px;
+$sizeDesktop:               $defaultSiteSize;
+$sizeCinema:                1500px;
+$cinemaWidth:               90%; // and hive will be at this size (usually 85/90% just to leave some margin)
+
+// configurations for boxes
+// if you need some div with the same height
+$box_unit_height:   150px;      // boxes height is a multiple of a unit. .box_3 means 1x3 units
+$max_boxes:         10;          // the maximum units available for a box
+$box_margin:        5px;        // distance between boxes and cells
