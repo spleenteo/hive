@@ -1,4 +1,4 @@
-/** HIVE SCSS YET ANOTHER RESPONSIVE GRID SYSTEM * Author Matteo Papadopoulos aka @spleenteo on twitter * http://www.cantierecreativo.net */
+/** THIS SITE USE HIVE SCSS - YET ANOTHER RESPONSIVE GRID SYSTEM * https://github.com/spleenteo/hive */
 @media only screen and (max-width: 680px) { .hive .pre_10 { padding-left: 0; }
   .hive .post_10 { padding-right: 0; }
   .hive .pre_20 { padding-left: 0; }
